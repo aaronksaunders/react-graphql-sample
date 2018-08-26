@@ -80,7 +80,10 @@ const AddMessage = () => {
    * function to update the cache after the mutation is completed
    */
   const cacheUpdate = (cache, { data: { addMessage } }) => {
+    // 1) get messages from cache
     const { messages } = cache.readQuery({ query: GET_MESSAGES });
+
+    // 2) add the new message cache
     cache.writeQuery({
       query: GET_MESSAGES,
       data: { messages: messages.concat([addMessage]) }
