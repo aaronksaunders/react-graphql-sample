@@ -45,6 +45,12 @@ const ADD_MESSAGE = gql`
 
 
 
+/**
+ * the is the component for the messages list that is rendered. This is a stateless
+ * functional component, see the readme for more information
+ * 
+ * @param {*} param0 
+ */
 const Messages = ({ }) => (
   <div  style={{border:'solid', margin : 10, padding : 10, borderWidth :1}}>
     <h2>MessagesComponent</h2>
@@ -53,6 +59,7 @@ const Messages = ({ }) => (
         if (loading) return "Loading...";
         if (error) return `Error From GetMessages Query: ${error.message}`;
 
+        // render the component..
         return (
           <div>
             {data.messages.map(message => (
@@ -113,6 +120,7 @@ const AddMessage = () => {
     };
   }
 
+  // render the component..
   return (
     <div style={{
       border:'solid', margin : 10, padding : 10, borderWidth :1

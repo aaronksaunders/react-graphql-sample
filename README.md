@@ -5,7 +5,7 @@
   ```console
   npm install apollo-boost react-apollo graphql --save
   ```
-
+- We utilize stateless functional components in this example to minimize code written and hopefully for more clarity when reading the code. More information is available here: [React Stateless Functional Components: Nine Wins You Might Have Overlooked](https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc)
 - This is the server the application connects to https://launchpad.graphql.com/r9x8jkr0qn
 
 ### More GraphQL Info
